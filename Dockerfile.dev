@@ -9,14 +9,5 @@ COPY . .
 
 CMD ["npm", "run", "start"]
 
-# Delete node_modules from development repo and use node_modules in container
-# Use -v flag to tell docker to use container node_modules
-# For hot reloading, second -v flag tells container to use non-container source code 
-#docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app <image_id>
 
-# Start container with testing CLI
-# docker run -it <image id> npm run test
-
-# start test suite from machine in the container
-# docker exec -it <image id> npm run test
 

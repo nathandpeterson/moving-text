@@ -84,15 +84,18 @@ export default class Ozymandias extends Component {
   }
 
   render(){
-    const { lines } = this.state
+    const { lines, currentLine } = this.state
     return (
       <div style={{layoutStyle}}>
         <div style={style}>
           <div  style={poemTitleStyle}
-                className='animated fadeInLeft'
           >Ozymandias</div>
           <div>Percy Bysshe Shelley</div>
           <br />
+          {currentLine === 0 && 
+          <h4 className='animated flash' style={poemTitleStyle}>
+            Press the <span>L</span> key to reveal a line
+          </h4>}
           {lines.map(this.renderLine)}
         </div>
       </div>
