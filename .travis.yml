@@ -12,7 +12,7 @@ deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
   name: "Moving-Text"
-  env: " MovingText-env"
+  env: "Moving-Text-env"
   bucket_name: "elasticbeanstalk-us-east-2-765940356773"
   bucket_path: "Moving-Text"
   on:
