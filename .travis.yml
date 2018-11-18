@@ -7,4 +7,16 @@ before_install:
   
 script:
   - docker run moving npm run test -- --coverage
-  
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  name: "Moving-Text"
+  env: " MovingText-env"
+  bucket_name: "elasticbeanstalk-us-east-2-765940356773"
+  bucket_path: "Moving-Text"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET"
